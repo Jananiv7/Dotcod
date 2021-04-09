@@ -1,0 +1,12 @@
+userMessages = {};
+userMessages.Incorrect = "Incorrrect Password!";
+userMessages.Success = "Success!";
+userMessages.Failure = "Failed!";
+userMessages.UpdatePassword = "Password changed successfully!";
+userMessages.MailMessage = "Mail send successfully!";
+userMessages.TokenError = "Invalid Token";
+userMessages.DateError = "Your link has been expired";
+userMessages.MailForgotPassword = "Forgot Password Link";
+userMessages.MailResetPassword = "Reset Password Link";
+userMessages.invalid_token = "Invalid Token";
+module.exports.userMessages = userMessages;

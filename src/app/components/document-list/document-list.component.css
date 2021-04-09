@@ -1,0 +1,18 @@
+.content-container {
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 25px;
+  }
+  mat-sidenav[style] {
+    visibility: visible !important;
+  }
+  .mat-drawer {
+    transform: none !important;
+  }
+  .leftspace{
+      margin-left:5%;
+  }
+  .mat-drawer-content {
+   margin-top:2%;
+    margin-left: 10%;
+  }

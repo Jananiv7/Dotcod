@@ -1,0 +1,58 @@
+<mat-toolbar color="light">
+    <mat-toolbar-row>
+        <h2>DOTCOD</h2>
+     <span class="leftspace"><mat-form-field>
+        <input placeholder = "Document Id" type="text" matInput  [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let pf of [1,2,3]" [value]="pf">{{pf}}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field> </span>
+    </mat-toolbar-row>
+  
+   
+  </mat-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]="'/documentList'"> <i class="fa fa-qrcode"></i> </a>
+        <a mat-list-item [routerLink]="'/documentList'"> <i class="fa fa-desktop"></i> </a>
+        <a mat-list-item [routerLink]="'/documentList'"><i class="fa fa-list" aria-hidden="true"></i></a>
+       
+        <a mat-list-item [routerLink]="'/documentList'"> <i class="fa fa-cog"></i> </a>
+       
+        <!-- <a mat-list-item (click)="sidenav.toggle()" [routerLink]="'/documentList'"mat-list-item>Close</a> -->
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 88vh;">
+        <mat-list *ngFor ="let i of documents">  
+        <div fxLayout="row wrap"  fxLayoutAlign="flex-start">
+          
+              <div fxFlex="30">
+                <mat-hint>Document Id</mat-hint>
+              <mat-list-item>{{i.documentId}} </mat-list-item> 
+            <mat-hint>Scan Id</mat-hint> 
+            <mat-list-item> {{i.scanId}} </mat-list-item>  
+        </div>
+        <div fxFlex="30">
+            <mat-hint>Created Date</mat-hint>
+          <mat-list-item>09-04-2021 </mat-list-item> 
+        <mat-hint>Created Time</mat-hint> 
+        <mat-list-item> 01:00 Am </mat-list-item>  
+    </div>
+        <div fxFlex="30">
+            <mat-hint>Name</mat-hint>  
+            <mat-list-item> {{i.name}} </mat-list-item> 
+            <mat-hint>Nationality</mat-hint> 
+            <mat-list-item> {{i.nationality}} </mat-list-item> 
+             </div>
+          </div>
+        <mat-divider></mat-divider></mat-list> 
+    
+       
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
